@@ -1,0 +1,89 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+}
+.passwords-not-same {
+  color: tomato;
+}
+.only-screen-reader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.form {
+  width: min(380px, 95%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  #google-auth {
+    display: grid;
+    padding: 5px;
+    font-size: 2.6rem;
+    border-radius: 50%;
+    background: #d6d6d6;
+    cursor: pointer;
+  }
+  .form-fields {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 0.35rem;
+      border: 1px solid;
+      font-size: 15px;
+      outline-color: $primary;
+    }
+  }
+  .form-changer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 0.35rem;
+    border: 1px solid;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    &:hover {
+      background: $primary;
+      color: white;
+      transition: all ease 0.3s;
+    }
+  }
+}
