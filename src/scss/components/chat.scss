@@ -1,0 +1,114 @@
+@import '../variables';
+
+.chat-view {
+  width: 100%;
+  margin-top: 55px;
+}
+.profile-bar {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: #99a7ad;
+  img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  button {
+    background: tomato;
+    color: #fff;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: .35rem;
+    font-size: 15px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+}
+.messages-list {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  overflow-y: auto;
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    background: #d5dee2;
+    padding: 10px;
+    border-radius: .35rem;
+    margin: 5px 0;
+    p {
+      font-size: 18px;
+      padding: 3px 0;
+      word-break: break-all;
+      text-align: start;
+    }
+    &.is-not-the-author {
+      margin-right: 35px;
+      align-self: flex-start;
+    }
+    &.is-the-author {
+      margin-left: 35px;
+      align-self: flex-end;
+    }
+    img {
+      height: 25px;
+      width: 25px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+}
+.input-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 50px;
+  input {
+    height: 100%;
+    width: 85%;
+    font-size: 18px;
+    border: 1px solid #aaa;
+    border-right: 0;
+    padding-left: 5px;
+    border-radius: .35rem 0 0 0;
+    outline: none;
+  }
+  button {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 5px;
+    justify-content: flex-end;
+    border: 1px solid #aaa;
+    border-left: 0;
+    font-size: 1.6rem;
+    color: #485e69;
+    background: #fff;
+    border-radius: 0 .35rem 0 0;
+    cursor: pointer;
+    outline: none;
+  }
+}
