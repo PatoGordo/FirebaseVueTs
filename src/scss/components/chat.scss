@@ -33,6 +33,11 @@
     place-items: center;
   }
 }
+.messages-list::-webkit-scrollbar{
+  color: transparent;
+  display: none;
+  background: transparent;
+}
 .messages-list {
   height: 100vh;
   width: 100%;
@@ -40,6 +45,7 @@
   flex-direction: column;
   padding: 0 10px;
   overflow-y: auto;
+  padding-bottom: 100px;
   li {
     display: flex;
     flex-direction: row;

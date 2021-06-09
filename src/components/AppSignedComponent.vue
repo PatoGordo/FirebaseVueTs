@@ -72,7 +72,7 @@ export default defineComponent({
         .catch((err) => {
           alert(err);
         });
-    },
+    }
   },
   created() {
     auth.onAuthStateChanged((user) => {
@@ -90,11 +90,14 @@ export default defineComponent({
           // Get only the change message and put on the messges array
           this.messages.push(change.doc.data());
           const el: any = this.$refs.messageScroll
-
           el.scrollTop = el.scrollHeight + 120
         });
       });
-  },
+    setTimeout(() => {
+      const el: any = this.$refs.messageScroll
+      el.scrollTop = el.scrollHeight + 120
+    }, 1000)
+  }
 });
 </script>
 
